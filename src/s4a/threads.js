@@ -213,6 +213,35 @@ Process.prototype.pwmWrite = function (pin, value) {
     }
 };
 
+Process.prototype.bearLeftPawWrite = function (value) {
+    var sprite = this.homeContext.receiver,
+    board = sprite.arduino.board;
+
+    value = 180 - value;
+    board.servoWrite(2, value);
+    return null;
+}
+
+Process.prototype.bearRightPawWrite = function (value) {
+    var sprite = this.homeContext.receiver,
+    board = sprite.arduino.board;
+
+    board.servoWrite(4, value);
+    return null;
+}
+
+Process.prototype.bearDoWait = function (secs) {
+    // FIXME: use doWait function
+    if (!this.context.startTime) {
+        this.context.startTime = Date.now();
+    }
+    if ((Date.now() - this.context.startTime) >= (secs * 1000)) {
+        return null;
+    }
+    this.pushContext('doYield');
+    this.pushContext();
+}
+
 Process.prototype.reportConnected = function () {
     var sprite = this.blockReceiver();
     return sprite.arduino.isBoardReady();

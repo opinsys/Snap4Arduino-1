@@ -122,6 +122,57 @@ SyntaxElementMorph.prototype.labelPart = function(spec) {
             part.originalChanged = part.changed;
             part.changed = function () { part.originalChanged(); if (block.toggle) { block.toggle.refresh(); } };
             break;
+
+        case '%leftPaw':
+            part = new SymbolMorph('leftPaw');
+            part.size = this.fontSize * 3.5;
+            part.color = new Color(255, 255, 255);
+            part.isProtectedLabel = false; // zebra colors
+            part.shadowColor = this.color.darker(this.labelContrast);
+            part.shadowOffset = MorphicPreferences.isFlat ?
+                new Point() : this.embossing;
+            part.drawNew();
+            break;
+
+        case '%rightPaw':
+            part = new SymbolMorph('rightPaw');
+            part.size = this.fontSize * 3.5;
+            part.color = new Color(255, 255, 255);
+            part.isProtectedLabel = false; // zebra colors
+            part.shadowColor = this.color.darker(this.labelContrast);
+            part.shadowOffset = MorphicPreferences.isFlat ?
+                new Point() : this.embossing;
+            part.drawNew();
+            break;
+
+        case '%pawValue':
+            part = new InputSlotMorph(
+                    null,
+                    true,
+                    {
+                        '0': '0',
+                        '10': '10',
+                        '20': '20',
+                        '30': '30',
+                        '40': '40',
+                        '50': '50',
+                        '60': '60',
+                        '70': '70',
+                        '80': '80',
+                        '90': '90',
+                        '100': '100',
+                        '110': '110',
+                        '120': '120',
+                        '130': '130',
+                        '140': '140',
+                        '150': '150',
+                        '160': '160',
+                        '170': '170',
+                        '180': '180'
+                    }
+                );
+            break;
+
         default:
             part = this.originalLabelPart(spec);
     }
