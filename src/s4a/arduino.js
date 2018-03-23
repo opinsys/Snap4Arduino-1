@@ -329,6 +329,9 @@ Arduino.prototype.connect = function (port, verify, channel) {
                     myself.board.connected = true;
                 }
 
+                myself.board.pinMode(2, myself.board.MODES.SERVO);
+                myself.board.pinMode(4, myself.board.MODES.SERVO);
+
                 myself.hideMessage();
                 myself.board.getArduinoBoardParam = nop;
 
