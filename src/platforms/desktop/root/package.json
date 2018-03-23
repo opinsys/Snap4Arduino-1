@@ -4,7 +4,7 @@
     "name": "Snap4Arduino",
     "description": "Snap4Arduino",
     "window": {
-        "title": "Snap4Arduino",
+        "title": "Snap4Arduino: Teddy Bear Programming",
         "icon": "s4a/icon-128.png",
         "frame": true,
         "position": "center",
