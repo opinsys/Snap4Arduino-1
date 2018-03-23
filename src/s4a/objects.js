@@ -346,6 +346,8 @@ SpriteMorph.prototype.blockTemplates = function (category) {
         button.showHelp = BlockMorph.prototype.showHelp;
         blocks.push(button);
     } else if (category === 'bear') {
+        blocks.push(this.arduinoConnectButton);
+        blocks.push(this.arduinoDisconnectButton);
         blocks.push(blockBySelector('bearLeftPawWrite'));
         blocks.push(blockBySelector('bearRightPawWrite'));
         blocks.push(blockBySelector('bearDoWait'));
