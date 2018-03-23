@@ -8,6 +8,8 @@ SpriteMorph.prototype.init = function(globals) {
 
 // Definition of a new Arduino Category
 
+SpriteMorph.prototype.categories = ["control", "operators", "variables", "lists"];
+
 SpriteMorph.prototype.categories.push('arduino');
 SpriteMorph.prototype.blockColor['arduino'] = new Color(24, 167, 181);
 
