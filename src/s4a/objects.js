@@ -396,7 +396,7 @@ SpriteMorph.prototype.freshPalette = function (category) {
     searchButton.labelShadowColor = shade;
     searchButton.drawNew();
     searchButton.fixLayout();
-	palette.toolBar.add(searchButton);
+	//palette.toolBar.add(searchButton);
 
     makeButton = new PushButtonMorph(
         this,
@@ -409,7 +409,7 @@ SpriteMorph.prototype.freshPalette = function (category) {
     makeButton.labelShadowColor = shade;
     makeButton.drawNew();
     makeButton.fixLayout();
-    palette.toolBar.add(makeButton);
+    //palette.toolBar.add(makeButton);
 
 	palette.toolBar.fixLayout();
     palette.add(palette.toolBar);
