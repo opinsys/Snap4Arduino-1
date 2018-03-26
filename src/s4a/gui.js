@@ -593,7 +593,7 @@ IDE_Morph.prototype.createCategories = function () {
     this.categories.silentSetWidth(this.logo.width()); // width is fixed
 
     function addCategoryButton(category) {
-        var labelWidth = 100,
+        var labelWidth = 150,
             colors = [
                 myself.frameColor,
                 myself.frameColor.darker(50),
@@ -638,10 +638,8 @@ IDE_Morph.prototype.createCategories = function () {
             buttonHeight = myself.categories.children[0].height(),
             border = 3,
             rows =  Math.ceil((myself.categories.children.length) / 2),
-            xPadding = (myself.categories.width()
-                    - border
-                    - buttonWidth * 2) / 3,
-            yPadding = 2,
+            xPadding = 4,
+            yPadding = 4,
             l = myself.categories.left(),
             t = myself.categories.top(),
             i = 0,
