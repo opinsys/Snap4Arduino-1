@@ -139,6 +139,10 @@ build() {
         if ! cp assets/s4a_logo_sm.png tmp; then
             print_warning "Could not find Snap4Arduino logo file."
         fi
+
+        if ! cp assets/teddybear_logo_sm.png tmp; then
+            print_warning "Could not find the Teddybear logo file."
+        fi
         
         echo "Fetching version file..."
         if ! cp src/version tmp; then

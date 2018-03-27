@@ -263,7 +263,7 @@ IDE_Morph.prototype.createLogo = function () {
     }
 
     this.logo = new Morph();
-    this.logo.texture = 's4a_logo_sm.png'; // Overriden
+    this.logo.texture = 'teddybear_logo_sm.png'; // Overriden
     this.logo.drawNew = function () {
         this.image = newCanvas(this.extent());
         var context = this.image.getContext('2d'),
