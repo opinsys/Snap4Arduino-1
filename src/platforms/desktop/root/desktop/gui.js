@@ -2,7 +2,7 @@ IDE_Morph.prototype.originalOpenIn = IDE_Morph.prototype.openIn;
 IDE_Morph.prototype.openIn = function (world) {
 //    this.checkForCLIparams();
     this.originalOpenIn(world);
-    this.checkForNewVersion();
+    //this.checkForNewVersion();
 };
 
 IDE_Morph.prototype.original2NewProject = IDE_Morph.prototype.newProject;
